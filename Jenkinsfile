@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        docker { image 'ansible/ansible' }
+        docker { image 'ansible/ansible:ubuntu1604py3' }
     } 
     stages{
         stage('Test'){
