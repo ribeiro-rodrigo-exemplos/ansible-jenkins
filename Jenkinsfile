@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        docker { image 'ansible/ansible:ubuntu1604py3' }
+        docker { image 'mullnerz/ansible-playbook' }
     } 
     stages{
         stage('Test'){
