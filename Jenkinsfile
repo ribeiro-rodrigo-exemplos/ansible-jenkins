@@ -2,7 +2,7 @@ pipeline{
     agent {
         docker { 
             image 'mullnerz/ansible-playbook'
-            args '-v $PWD:/ansible/playbooks'
+            args '-u root -v $(PWD):/ansible/playbooks'
          }
     }
     //agent any  
@@ -11,6 +11,7 @@ pipeline{
            steps{
                sh "pwd"
                sh "ls"
+               sh "cd /ansible/playbooks"
                ansiblePlaybook (credentialsId: 'arquitetura-ssh', inventory: 'hosts', playbook: 'provisioning.yml')
            } 
         }
