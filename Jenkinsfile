@@ -2,7 +2,7 @@ pipeline{
     agent {
         docker { 
             image 'mullnerz/ansible-playbook'
-            args '-u root -v $(PWD):/ansible/playbooks'
+            args '-u root -v $PWD:/ansible/playbooks'
          }
     }
     //agent any  
