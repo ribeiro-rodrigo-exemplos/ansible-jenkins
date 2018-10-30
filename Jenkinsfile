@@ -1,7 +1,8 @@
 pipeline{
-    agent {
+    /*agent {
         docker { image 'mullnerz/ansible-playbook' }
-    } 
+    }*/
+    agent any  
     stages{
         stage('Test'){
            steps{
