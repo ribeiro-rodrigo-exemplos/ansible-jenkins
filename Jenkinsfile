@@ -6,6 +6,7 @@ pipeline{
         stage('Test'){
            steps{
                sh "pwd"
+               sh "ls"
                ansiblePlaybook (credentialsId: 'arquitetura-ssh', inventory: 'hosts', playbook: 'provisioning.yml')
            } 
         }
