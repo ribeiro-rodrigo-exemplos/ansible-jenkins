@@ -1,0 +1,4 @@
+---
+- hosts: all 
+  tasks: 
+    - shell: 'echo hello > /home/arquitetura/world.txt'
