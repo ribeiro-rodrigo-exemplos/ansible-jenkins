@@ -12,7 +12,7 @@ pipeline{
            steps{
                sh "pwd"
                sh "ls"
-               sh "cd /ansible/playbooks"
+               //sh "cd /ansible/playbooks"
                sh "ls"
                ansiColor('xterm'){
                     //ansiblePlaybook (credentialsId: 'ssh_key', inventory: 'hosts', playbook: 'provisioning.yml',colorized: true)
