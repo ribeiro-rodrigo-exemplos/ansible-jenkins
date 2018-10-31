@@ -1,9 +1,10 @@
 pipeline{
     agent {
-        docker { 
+        /*docker { 
             image 'mullnerz/ansible-playbook'
             //args '-u root -v $PWD:/ansible/playbooks'
-         }
+         }*/
+         dockerfile true 
     }
     //agent any  
     stages{
@@ -12,9 +13,9 @@ pipeline{
                sh "pwd"
                sh "ls"
                //sh "cd /ansible/playbooks"
-               ansiColor('xterm'){
+               /*ansiColor('xterm'){
                     ansiblePlaybook (credentialsId: 'ssh_key', inventory: 'hosts', playbook: 'provisioning.yml',colorized: true)
-               }
+               }*/ 
            } 
         }
     }
