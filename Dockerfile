@@ -1,3 +1,3 @@
 FROM ubuntu:18.10
-USER rodrigo
+USER root
 RUN "echo teste"
