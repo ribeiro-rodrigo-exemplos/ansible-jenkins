@@ -1,5 +1,6 @@
 [monitriip]
-198.211.108.140
+172.18.107.218
+#198.211.108.140
 
-[monitriip:vars]
-ansible_python_interpreter=/usr/bin/python3
+#[monitriip:vars]
+#ansible_python_interpreter=/usr/bin/python3

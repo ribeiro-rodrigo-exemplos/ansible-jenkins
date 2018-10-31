@@ -14,9 +14,9 @@ pipeline{
                sh "ls"
                sh "cd /ansible/playbooks"
                sh "ls"
-               /*ansiColor('xterm'){
+               ansiColor('xterm'){
                     ansiblePlaybook (credentialsId: 'ssh_key', inventory: 'hosts', playbook: 'provisioning.yml',colorized: true)
-               }*/
+               }
            } 
         }
     }
